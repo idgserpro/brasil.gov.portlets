@@ -26,9 +26,9 @@ before_script:
 script:
 - bin/code-analysis
 - bin/test
+after_success:
+- unset DISPLAY
 - bin/createcoverage -t "--layer=!Robot"
-#after_success:
-#- bin/createcoverage -t "--layer=!Robot"
 # - pip install -q coveralls
 # - coveralls
 notifications:
