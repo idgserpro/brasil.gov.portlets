@@ -27,7 +27,7 @@ script:
 - bin/code-analysis
 - bin/test
 after_success:
-- bin/createcoverage -t "--layer=!Acceptance"
+- bin/createcoverage -t "--layer=!Robot"
 - pip install -q coveralls
 - coveralls
 notifications:
