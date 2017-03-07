@@ -29,6 +29,6 @@ script:
 after_success:
 - bin/createcoverage -t "--layer=!Robot"
 - pip install -q coveralls
-- coveralls
+# - coveralls
 notifications:
   irc: irc.freenode.org#plonegovbr
