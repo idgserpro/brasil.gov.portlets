@@ -27,8 +27,8 @@ script:
 - bin/code-analysis
 #- bin/test
 after_success:
-- chmod 4755 /usr/lib/chromium-browser/chrome-sandbox
-- bin/createcoverage -t "--layer=!Robot"
+- firefox
+#- bin/createcoverage -t "--layer=!Robot"
 # - pip install -q coveralls
 # - coveralls
 notifications:
