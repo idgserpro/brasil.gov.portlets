@@ -27,7 +27,7 @@ script:
 - bin/code-analysis
 #- bin/test
 after_success:
-- firefox
+- firefox &
 #- bin/createcoverage -t "--layer=!Robot"
 # - pip install -q coveralls
 # - coveralls
