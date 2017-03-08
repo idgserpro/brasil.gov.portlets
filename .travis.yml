@@ -25,12 +25,10 @@ before_script:
 - firefox -v
 script:
 - bin/code-analysis
-- bin/test
+#- bin/test
 after_success:
-- python -m webbrowser "http://www.python.org"
-#- unset DISPLAY
-#- bin/createcoverage -t "--layer=!Robot"
-- ps aux
+- sudo chmod 4755 /usr/lib/chromium-browser/chrome-sandbox
+- bin/createcoverage -t "--layer=!Robot"
 # - pip install -q coveralls
 # - coveralls
 notifications:
